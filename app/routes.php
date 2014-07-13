@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+// Home page
+Route::get('/', function() {
+	return View::make('index');		
+
+
 });
