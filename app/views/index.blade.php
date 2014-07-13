@@ -19,11 +19,11 @@
 
 	<p>Create random filler text for your applications.</p>
 
-	<a href='/text'>Generate some text...</a> 
+	<a href='/lorem-ipsum'>Generate some text...</a> 
 
 	<h2>Random User Generator</h2>|
 
 	<p>Create random user data for your applications. Like Lorem Ipsum, but for people.</p> 
-	<a href='/user'>Generate some users...</a>
+	<a href='/user-generator'>Generate some users...</a>
 @stop
 

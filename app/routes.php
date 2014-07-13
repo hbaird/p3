@@ -17,3 +17,31 @@ Route::get('/', function() {
 
 
 });
+
+/ Display edit form
+Route::get('/lorem-ipsum/', function() {
+
+
+});
+
+
+// Process edit form
+Route::post('/lorem-ipsum/', function() {
+
+
+});
+
+
+// Display add form
+Route::get('/user-generator/', function() {
+
+
+});
+
+
+// Process add form
+Route::post('/user-generator/', function() {
+
+
+
+});

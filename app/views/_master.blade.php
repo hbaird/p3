@@ -18,10 +18,6 @@
 
 <body>
 
-
-	<a href='/'><img class='logo' src='<?php echo URL::asset('/images/logo@2x.png'); ?>' alt='Foobooks Logo'></a>
-
-
 	@yield('content')
 
 
