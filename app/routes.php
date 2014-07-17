@@ -18,36 +18,39 @@ Route::get('/', function() {
 
 });
 
-// Display edit form
+// Display lorem-ipsum form
 Route::get('/lorem-ipsum/', function() {
+
+	$query = Input::get('query');
 	$generator = new Badcow\LoremIpsum\Generator();
-	$paragraphs = $generator->getParagraphs(5);
+	$paragraphs = $generator->getParagraphs($query);	
 	echo implode('<p>', $paragraphs);
+	return View::make('lorem_ipsum');	
 	
 });
 
 
-// Process edit form
+// Process lorem-ipsum form
 Route::post('/lorem-ipsum/', function() {
 
 
 });
 
 
-// Display add form
+// Display user-generator form
 Route::get('/user-generator/', function() {
-
+	$query = Input::get('query');
+	
 	// use the factory to create a Faker\Generator instance
 	$faker = Faker\Factory::create();
 
 	// generate data by accessing properties
-	echo $faker->name;
+	echo $faker->name; 
   	// 'Lucy Cechtelar';
 	echo $faker->address;
     // "426 Jordy Lodge
     // Cartwrightshire, SC 88120-6700"
-	echo $faker->text;
-
+	return View::make('user_generator');
 });
 
 
