@@ -9,7 +9,8 @@ of lorem ipsum text as determined by the user's input number. The second generat
 99 names as determined by the user's input number.
 
 <h1>Details for Teaching Team</h1>
-The application makes use of the Laravel framework conventions; however, the generated text and users are echod from the routes.php file and so appear at the top of each page. This pushes the form to the bottom. It may be necessary to scroll down the page to resubmit user input.
+The application currently does not have check boxes enabled. The user generator provides
+a name, birthday, and profile.
 
 <h1>Outside Code</h1>
 Bootstrap: <http://getbootstrap.com/>

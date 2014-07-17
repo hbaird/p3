@@ -23,9 +23,8 @@ Route::get('/lorem-ipsum/', function() {
 
 	$query = Input::get('query');
 	$generator = new Badcow\LoremIpsum\Generator();
-	$paragraphs = $generator->getParagraphs($query);	
-	echo implode('<p>', $paragraphs);
-	return View::make('lorem_ipsum');	
+	$paragraphs = $generator->getParagraphs($query);
+	return View::make('lorem_ipsum')->with('paragraphs', $paragraphs);	
 	
 });
 
@@ -44,13 +43,7 @@ Route::get('/user-generator/', function() {
 	// use the factory to create a Faker\Generator instance
 	$faker = Faker\Factory::create();
 
-	// generate data by accessing properties
-	echo $faker->name; 
-  	// 'Lucy Cechtelar';
-	echo $faker->address;
-    // "426 Jordy Lodge
-    // Cartwrightshire, SC 88120-6700"
-	return View::make('user_generator');
+	return View::make('user_generator')->with('faker', $faker)->with('query', $query);
 });
 
 

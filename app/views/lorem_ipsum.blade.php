@@ -9,7 +9,7 @@
 
 
 @section('title')
-	Lorem Ipsum Generator
+	User Generator
 @stop
 
 
@@ -25,9 +25,9 @@
 
 		{{ Form::open(array('url' => '/lorem-ipsum', 'method' => 'GET')) }}
 
-		<label for="paragraphs">Paragraphs</label>
+		{{ Form::label('paragraphs', 'Paragraphs') }}
 		
-		{{ Form::text('query') }} (Max:99)
+		{{ Form::text('query', 5, array('size' => '20','maxlength' => '2')) }} (Max:99)
 
 		<br><br>
 
@@ -35,6 +35,14 @@
 
 
 	{{ Form::close() }}
+
+	<br>
+
+	@foreach($paragraphs as $paragraph => $value)
+
+	<p> {{ $value }} </p>
+
+	@endforeach
 
 </section>
 
