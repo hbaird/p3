@@ -54,7 +54,7 @@ Route::get('/user-generator/', function() {
 });
 
 
-// Process add form
+// Process user-generator form
 Route::post('/user-generator/', function() {
 
 
